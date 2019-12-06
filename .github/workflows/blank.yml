@@ -9,8 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2-beta
-      with:
-        token: ${{ secrets.ACCESS_TOKEN }}
     - name: install things and set up
       run: |
         git config --global user.email "ties@stuij.se"
