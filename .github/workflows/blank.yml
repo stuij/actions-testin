@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: install mmix
+      run: |
+        wget https://github.com/ascherer/mmix/releases/download/2017-09-17/mmix_20170917-2_amd64.deb
+        sudo apt install mmix_20170917-2_amd64.deb
+        mmix
