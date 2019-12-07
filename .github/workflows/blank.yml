@@ -16,6 +16,4 @@ jobs:
         git fetch --unshallow --tags
     - name: make and push tag
       run: |
-        printf -v TAG_NAME 'upstream-rebase-%(%Y-%m-%d)T\n' -1
-        git tag $TAG_NAME
-        git push origin $TAG_NAME
+        echo blob | tee /dev/stderr | grep -q "bl"
